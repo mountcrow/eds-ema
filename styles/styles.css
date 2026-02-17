@@ -55,7 +55,7 @@
   --button-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 
   /* spacing */
-  --section-padding: 60px 0;
+  --section-padding: 75px 0;
 
   /* nav height */
   --nav-height: 64px;
@@ -301,7 +301,7 @@ main .section.center {
 main .section.dark {
   background-color: var(--color-dark);
   color: var(--color-white);
-  padding: 60px 0;
+  padding: 75px 0;
 }
 
 main .section.dark h1,
@@ -325,11 +325,16 @@ main .section.dark a.button:hover {
   color: var(--color-primary-red);
 }
 
+main .section.dark .cards > ul > li {
+  border-color: rgb(255 255 255 / 15%);
+  background-color: transparent;
+}
+
 /* section metadata - red background (accent) */
 main .section.accent {
   background-color: var(--color-primary-red);
   color: var(--color-white);
-  padding: 60px 0;
+  padding: 75px 0;
 }
 
 main .section.accent h1,
@@ -354,9 +359,15 @@ main .section.accent a.button:hover {
 }
 
 /* section metadata - light background */
+
+/* Hide metadata section */
+main .section.metadata {
+  display: none;
+}
+
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
-  padding: 60px 0;
+  padding: 75px 0;
 }

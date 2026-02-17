@@ -3,13 +3,14 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
 }
 
 .cards > ul > li {
   border: 1px solid #dadada;
   background-color: var(--background-color);
+  overflow: hidden;
 }
 
 .cards .cards-card-body {
@@ -24,4 +25,101 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+/* Responsive grid: 2 columns on tablet */
+@media (width >= 600px) {
+  .cards > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 columns on desktop for event cards (text-only) */
+@media (width >= 900px) {
+  .cards > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Cards with images: 4-column grid on large desktop (programs) */
+.cards:has(.cards-card-image) > ul > li {
+  border: none;
+  background: transparent;
+}
+
+@media (width >= 900px) {
+  .cards:has(.cards-card-image) > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 1200px) {
+  .cards:has(.cards-card-image) > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Cards with images: nicer card style */
+.cards:has(.cards-card-image) > ul > li img {
+  aspect-ratio: 3 / 4;
+}
+
+.cards:has(.cards-card-image) .cards-card-body {
+  padding: 8px 0;
+}
+
+.cards:has(.cards-card-image) .cards-card-body p:first-child {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-m);
+  font-weight: 400;
+  color: var(--color-heading);
+}
+
+/* stylelint-disable no-descending-specificity */
+
+/* Dark section: adapt card appearance */
+.dark .cards > ul > li {
+  border-color: rgb(255 255 255 / 15%);
+  background-color: transparent;
+}
+
+.dark .cards .cards-card-body p {
+  color: rgb(255 255 255 / 80%);
+}
+
+.dark .cards .cards-card-body p:first-child {
+  color: var(--color-white);
+}
+
+.dark .cards:has(.cards-card-image) .cards-card-body p:first-child {
+  color: var(--color-white);
+}
+
+/* Location cards: compact style with centered link */
+.dark .cards:has(.cards-card-image) > ul > li img {
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+}
+
+.dark .cards:has(.cards-card-image) .cards-card-body {
+  text-align: center;
+}
+
+.dark .cards:has(.cards-card-image) .cards-card-body a {
+  color: var(--color-white);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-s);
+}
+
+/* Location cards: 3-col then 6-col grid */
+@media (width >= 900px) {
+  .dark .cards:has(.cards-card-image) > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width >= 1200px) {
+  .dark .cards:has(.cards-card-image) > ul {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
