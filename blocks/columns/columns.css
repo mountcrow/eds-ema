@@ -23,57 +23,11 @@
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: 32px;
+    gap: 24px;
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
-  }
-}
-
-/* Accent section columns (Probetraining) */
-.accent .columns h2 {
-  font-size: 56px;
-  font-weight: 400;
-  color: var(--color-white);
-}
-
-.accent .columns p {
-  color: rgb(255 255 255 / 90%);
-}
-
-.accent .columns a.button:any-link {
-  background-color: transparent;
-  border-color: var(--color-white);
-  color: var(--color-white);
-}
-
-.accent .columns a.button:hover {
-  background-color: var(--color-white);
-  color: var(--color-primary-red);
-}
-
-/* 4-column partner logos layout */
-.columns.columns-4-cols > div {
-  gap: 16px;
-}
-
-.columns.columns-4-cols > div > div {
-  text-align: center;
-}
-
-/* stylelint-disable-next-line no-descending-specificity */
-.columns.columns-4-cols img {
-  max-height: 80px;
-  width: auto;
-  object-fit: contain;
-}
-
-@media (width >= 900px) {
-  .columns.columns-4-cols > div {
-    gap: 32px;
-    justify-content: center;
-    align-items: center;
   }
 }
