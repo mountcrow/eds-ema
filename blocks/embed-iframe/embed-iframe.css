@@ -1,0 +1,78 @@
+/* Terna embed tile (e.g. realtime electricity demand chart): 4:3 frame inside a tile */
+.embed-iframe {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: var(--tile-padding);
+  text-align: left;
+}
+
+.embed-iframe > div {
+  display: flex;
+  justify-content: center;
+}
+
+.embed-iframe .embed-iframe-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.embed-iframe .embed-iframe-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-iframe.embed-iframe-twitter .twitter-tweet-rendered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embed-iframe .embed-iframe-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+.embed-iframe .embed-iframe-placeholder > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.embed-iframe .embed-iframe-placeholder picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.embed-iframe .embed-iframe-placeholder-play button {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(3);
+  width: 22px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 0;
+}
+
+.embed-iframe .embed-iframe-placeholder-play button::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 0;
+  height: 10px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 6px solid;
+  top: 4px;
+  left: 7px;
+}

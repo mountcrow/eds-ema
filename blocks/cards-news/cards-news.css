@@ -1,0 +1,107 @@
+/* Terna news list tile: pages of three linked titles with dates, dot pagination bottom-right */
+.cards-news {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: var(--tile-padding);
+  padding-bottom: 72px;
+}
+
+.cards-news > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, auto);
+  align-content: start;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.cards-news > ul::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-news > ul > li {
+  padding: 0 0 18px;
+  scroll-snap-align: start;
+  border: 0;
+  background: none;
+}
+
+.cards-news .cards-news-card-body {
+  margin: 0;
+}
+
+.cards-news .cards-news-card-body h3,
+.cards-news .cards-news-card-body h4 {
+  margin: 0;
+  color: var(--link-color);
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.cards-news .cards-news-card-body h3 a:any-link,
+.cards-news .cards-news-card-body h4 a:any-link {
+  color: inherit;
+}
+
+.cards-news .cards-news-card-body p {
+  margin: 4px 0 0;
+  color: var(--text-strong-color);
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.cards-news .cards-news-card-image {
+  line-height: 0;
+}
+
+.cards-news > ul > li img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* dot pagination */
+.cards-news .cards-news-pagination {
+  position: absolute;
+  right: 34px;
+  bottom: 43px;
+  display: flex;
+  gap: 6px;
+}
+
+.cards-news .cards-news-dot {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background-color: #949494;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cards-news .cards-news-dot[aria-current="true"],
+.cards-news .cards-news-dot:hover,
+.cards-news .cards-news-dot:focus-visible {
+  background-color: var(--link-color);
+}
+
+@media (width >= 900px) {
+  .cards-news > ul > li {
+    padding-right: 50px;
+  }
+}

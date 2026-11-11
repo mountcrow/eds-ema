@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-news",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-29T11:49:58.857Z",
+  "sourceContext": {
+    "originUrl": "https://www.terna.it/en",
+    "originPage": "Terna corporate homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "article",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "title + date + optional link per card",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "press release lists",
+      "operator news lists",
+      "document/financial info lists"
+    ],
+    "notSuitableFor": [
+      "image-led promo cards",
+      "hero banners"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/en"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-29T11:49:58.857Z"
+  }
+}

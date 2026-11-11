@@ -1,0 +1,153 @@
+/*
+ * Terna editorial callout tile: eyebrow, Oswald headline, optional text, CTA pinned to the bottom.
+ * Variants: indigo | blue | teal (coloured tiles with white text), calendar (blue headline).
+ */
+.columns-callout {
+  --columns-callout-bg: transparent;
+  --columns-callout-fg: var(--text-color);
+  --columns-callout-link: var(--link-color);
+
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: var(--tile-padding);
+  background-color: var(--columns-callout-bg);
+  color: var(--columns-callout-fg);
+}
+
+.columns-callout.indigo {
+  --columns-callout-bg: var(--callout-indigo);
+}
+
+.columns-callout.blue {
+  --columns-callout-bg: var(--callout-blue);
+}
+
+.columns-callout.teal {
+  --columns-callout-bg: var(--callout-teal);
+}
+
+.columns-callout.indigo,
+.columns-callout.blue,
+.columns-callout.teal {
+  --columns-callout-fg: #fff;
+  --columns-callout-link: #fff;
+}
+
+.columns-callout > div {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.columns-callout > div > div {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  order: 1;
+}
+
+.columns-callout > div > .columns-callout-img-col {
+  order: 0;
+}
+
+.columns-callout img {
+  width: 100%;
+}
+
+.columns-callout > div > .columns-callout-img-col img {
+  display: block;
+}
+
+.columns-callout p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.columns-callout .columns-callout-eyebrow {
+  margin-bottom: 17px;
+  font-size: var(--label-font-size);
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: var(--label-letter-spacing);
+  text-transform: uppercase;
+}
+
+.columns-callout .columns-callout-eyebrow em,
+.columns-callout .columns-callout-eyebrow strong {
+  font-style: normal;
+  font-weight: inherit;
+}
+
+.columns-callout h1,
+.columns-callout h2,
+.columns-callout h3 {
+  margin: 0 0 43px;
+  color: inherit;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xl);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+/* calendar variant: blue date headline */
+.columns-callout.calendar h1,
+.columns-callout.calendar h2,
+.columns-callout.calendar h3 {
+  margin: 20px 0;
+  color: var(--link-color);
+}
+
+.columns-callout.calendar p:not(.columns-callout-eyebrow, :last-child) {
+  color: var(--text-strong-color);
+}
+
+.columns-callout.calendar .columns-callout-eyebrow {
+  color: var(--text-strong-color);
+}
+
+/* CTA: last paragraph holding only a link, pinned to the tile bottom */
+.columns-callout p:last-child:has(> a:only-child) {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.columns-callout a:any-link {
+  color: var(--columns-callout-link);
+}
+
+.columns-callout p:last-child > a:only-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--cta-font-size);
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: var(--label-letter-spacing);
+  text-transform: uppercase;
+}
+
+.columns-callout p:last-child > a:only-child::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 1.5px solid currentcolor;
+  border-right: 1.5px solid currentcolor;
+  transform: rotate(45deg);
+}
+
+@media (width >= 900px) {
+  .columns-callout > div {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .columns-callout > div > div {
+    flex: 1;
+    order: unset;
+  }
+}

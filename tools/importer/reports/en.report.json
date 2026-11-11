@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "url": "https://www.terna.it/en",
+  "path": "en",
+  "timestamp": "2026-07-29T12:13:27.794Z",
+  "title": "Terna Driving Energy - Terna spa",
+  "template": "homepage",
+  "blocks": [
+    "carousel-hero",
+    "columns-ticker",
+    "embed-iframe",
+    "cards-news",
+    "cards-news",
+    "cards-news",
+    "cards-media",
+    "cards-media",
+    "cards-media",
+    "columns-callout",
+    "columns-callout",
+    "columns-callout",
+    "columns-callout",
+    "columns-callout",
+    "columns-callout",
+    "hero-dark",
+    "tabs-kpi"
+  ]
+}

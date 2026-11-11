@@ -1,0 +1,164 @@
+/* Terna media cards: full-bleed image with dark overlay, white Oswald title, CTA pinned to the bottom */
+.cards-media {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.cards-media > ul {
+  list-style: none;
+  display: flex;
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.cards-media > ul::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-media > ul > li {
+  position: relative;
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 448px;
+  scroll-snap-align: start;
+  overflow: hidden;
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.cards-media .cards-media-card-image {
+  position: absolute;
+  inset: 0;
+  line-height: 0;
+}
+
+.cards-media .cards-media-card-image p {
+  margin: 0;
+}
+
+.cards-media .cards-media-card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0 0 0 / 30%);
+}
+
+.cards-media > ul > li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cards-media .cards-media-card-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  margin: 0;
+  padding: var(--tile-padding);
+}
+
+.cards-media .cards-media-card-body p {
+  margin: 24px 0 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* label (e.g. "Go to Blog" / programme name) */
+.cards-media .cards-media-card-body > p:first-child:has(> em:only-child),
+.cards-media .cards-media-card-body > p:first-child:has(> strong:only-child) {
+  margin: 0 0 17px;
+  font-size: var(--label-font-size);
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: var(--label-letter-spacing);
+  text-transform: uppercase;
+}
+
+.cards-media .cards-media-card-body > p:first-child em {
+  font-style: normal;
+}
+
+.cards-media .cards-media-card-body h2,
+.cards-media .cards-media-card-body h3 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xl);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+/* CTA sits at the bottom of the card */
+.cards-media .cards-media-card-body > p:last-child:has(> a:only-child) {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.cards-media .cards-media-card-body a:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: var(--cta-font-size);
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: var(--label-letter-spacing);
+  text-transform: uppercase;
+}
+
+.cards-media .cards-media-card-body a:any-link::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 1.5px solid currentcolor;
+  border-right: 1.5px solid currentcolor;
+  transform: rotate(45deg);
+}
+
+/* dot pagination */
+.cards-media .cards-media-pagination {
+  position: absolute;
+  right: 34px;
+  bottom: 43px;
+  z-index: 2;
+  display: flex;
+  gap: 6px;
+}
+
+.cards-media .cards-media-dot {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  background-color: #949494;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cards-media .cards-media-dot[aria-current="true"],
+.cards-media .cards-media-dot:hover,
+.cards-media .cards-media-dot:focus-visible {
+  background-color: var(--link-color);
+}
+
+@media (width >= 900px) {
+  .cards-media .cards-media-card-body {
+    max-width: 640px;
+  }
+}

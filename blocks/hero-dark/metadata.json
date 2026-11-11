@@ -1,0 +1,40 @@
+{
+  "variantName": "hero-dark",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-07-29T11:49:58.857Z",
+  "sourceContext": {
+    "originUrl": "https://www.terna.it/en",
+    "originPage": "Terna corporate homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background image + eyebrow + heading + paragraph + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "mid-page dramatic banners",
+      "full-bleed dark image CTAs",
+      "investment/statement callouts"
+    ],
+    "notSuitableFor": [
+      "light two-column callouts",
+      "card grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/en"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-29T11:49:58.857Z"
+  }
+}

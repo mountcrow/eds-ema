@@ -1,0 +1,77 @@
+/* Terna stock ticker strip below the hero: label over bold value, separated by wide gaps */
+.columns-ticker {
+  padding: 0 16px;
+  color: var(--text-color);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.columns-ticker > div {
+  display: flex;
+  gap: 24px 32px;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 0 22px;
+  border-bottom: 1px solid #ddd;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.columns-ticker > div::-webkit-scrollbar {
+  display: none;
+}
+
+.columns-ticker > div > div {
+  flex: 0 0 auto;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.columns-ticker p {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.columns-ticker p + p,
+.columns-ticker strong {
+  font-weight: 600;
+}
+
+.columns-ticker img {
+  width: 100%;
+}
+
+.columns-ticker > div > .columns-ticker-img-col img {
+  display: block;
+}
+
+@media (width >= 900px) {
+  .columns-ticker {
+    padding: 0 54px;
+  }
+
+  .columns-ticker > div {
+    justify-content: center;
+    gap: 50px;
+  }
+
+  /* blue divider after the last value, as on the source marquee */
+  .columns-ticker > div > div:last-child {
+    position: relative;
+    padding-right: 28px;
+  }
+
+  .columns-ticker > div > div:last-child::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 3px;
+    height: 25px;
+    border-radius: 3px;
+    background-color: var(--link-color);
+  }
+}

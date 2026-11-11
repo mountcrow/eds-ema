@@ -1,0 +1,40 @@
+{
+  "variantName": "tabs-kpi",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-07-29T11:49:58.857Z",
+  "sourceContext": {
+    "originUrl": "https://www.terna.it/en",
+    "originPage": "Terna corporate homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "feature",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "tab label + stat-grid panel per tab",
+    "buttonCount": 0,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "KPI/highlight tab groups",
+      "switchable stat dashboards",
+      "categorized metric panels"
+    ],
+    "notSuitableFor": [
+      "single-panel content",
+      "accordion Q&A"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/en"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-29T11:49:58.857Z"
+  }
+}
