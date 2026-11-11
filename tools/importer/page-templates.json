@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.terna.it/en"
+      ],
+      "representativeUrl": "https://www.terna.it/en",
+      "coverageGaps": [],
+      "description": "Terna corporate homepage with hero slider, stock ticker, press releases, blog cards, editorial callouts, financial info, calendar, operator news, KPI highlights, and promo cards.",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [".area--area-1 #swiperContainer"]
+        },
+        {
+          "name": "columns-ticker",
+          "instances": [".area--area-1 .teleborsa--wrapper"]
+        },
+        {
+          "name": "embed-iframe",
+          "instances": [".area--area-3 .cmp--terna-iframe"]
+        },
+        {
+          "name": "cards-news",
+          "instances": [
+            ".area--area-4 .cmp--terna-documentlistcover",
+            ".area--area-24 .cmp--terna-documentlistcoverarchivio",
+            ".area--area-27 .cmp--terna-documentlistcover"
+          ]
+        },
+        {
+          "name": "cards-media",
+          "instances": [
+            ".area--area-5 .cmp--terna-slidecontent",
+            ".area--area-32 .cmp--terna-slidecontent"
+          ]
+        },
+        {
+          "name": "columns-callout",
+          "instances": [
+            ".area--area-13 .cmp--terna-slidecontent",
+            ".area--area-14 .cmp--terna-slidecontent",
+            ".area--area-15 .cmp--terna-slidecontent",
+            ".area--area-23 .cmp--terna-slidecontent",
+            ".area--area-25 .cmp--custom-html",
+            ".area--area-26 .cmp--terna-slidecontent"
+          ]
+        },
+        {
+          "name": "hero-dark",
+          "instances": [".area--area-28 .cmp--terna-slidecontent"]
+        },
+        {
+          "name": "tabs-kpi",
+          "instances": [".area--area-32 #kpiApp"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "sec-hero",
+          "name": "Hero slider + ticker",
+          "selector": ".area--area-1",
+          "style": null,
+          "blocks": ["carousel-hero", "columns-ticker"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-realtime-demand",
+          "name": "Realtime Electricity Demand",
+          "selector": ".area--area-3",
+          "style": "light",
+          "blocks": ["embed-iframe"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-press-releases",
+          "name": "Press Releases",
+          "selector": ".area--area-4",
+          "style": "light",
+          "blocks": ["cards-news"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-blog-cards",
+          "name": "Blog cards",
+          "selector": ".area--area-5",
+          "style": "light",
+          "blocks": ["cards-media"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-callout-behind-energy",
+          "name": "We are behind the energy",
+          "selector": ".area--area-9",
+          "style": "light",
+          "blocks": [],
+          "defaultContent": [".area--area-9 .cmp--website-boxevidence"]
+        },
+        {
+          "id": "sec-callout-sustainability",
+          "name": "Sustainability callout",
+          "selector": ".area--area-13",
+          "style": "light",
+          "blocks": ["columns-callout"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-callout-innovation",
+          "name": "Innovation callout",
+          "selector": ".area--area-14",
+          "style": "light",
+          "blocks": ["columns-callout"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-callout-electricity-system",
+          "name": "Electricity System callout",
+          "selector": ".area--area-15",
+          "style": "light",
+          "blocks": ["columns-callout"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-callout-2025-results",
+          "name": "2025 Results callout",
+          "selector": ".area--area-23",
+          "style": "light",
+          "blocks": ["columns-callout"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-financial-info",
+          "name": "Financial Info",
+          "selector": ".area--area-24",
+          "style": "light",
+          "blocks": ["cards-news"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-calendar",
+          "name": "Calendar",
+          "selector": ".area--area-25",
+          "style": "light",
+          "blocks": ["columns-callout"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-callout-regional-planning",
+          "name": "Efficient Regional Planning callout",
+          "selector": ".area--area-26",
+          "style": "light",
+          "blocks": ["columns-callout"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-operator-news",
+          "name": "Operator News",
+          "selector": ".area--area-27",
+          "style": "light",
+          "blocks": ["cards-news"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-callout-behind-projects",
+          "name": "Behind our projects (dark)",
+          "selector": ".area--area-28",
+          "style": "dark",
+          "blocks": ["hero-dark"],
+          "defaultContent": []
+        },
+        {
+          "id": "sec-kpi-and-promos",
+          "name": "KPI Highlights + promo cards",
+          "selector": ".area--area-32",
+          "style": "light",
+          "blocks": ["tabs-kpi", "cards-media"],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

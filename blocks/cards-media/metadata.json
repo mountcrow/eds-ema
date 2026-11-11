@@ -1,0 +1,40 @@
+{
+  "variantName": "cards-media",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-07-29T11:49:58.857Z",
+  "sourceContext": {
+    "originUrl": "https://www.terna.it/en",
+    "originPage": "Terna corporate homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "article",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + title + CTA per card",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "blog/article cards with images",
+      "promotional tile rows",
+      "3-up image feature cards"
+    ],
+    "notSuitableFor": [
+      "text-only news lists",
+      "tabular data"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/en"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-29T11:49:58.857Z"
+  }
+}

@@ -1,0 +1,182 @@
+/* Terna KPI highlights: light-blue band, white box with vertical tabs and a row of Oswald figures */
+.tabs-kpi {
+  padding: 24px 16px 16px;
+  background-color: var(--lighter-color);
+}
+
+.tabs-kpi .tabs-kpi-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background-color: var(--background-color);
+}
+
+.tabs-kpi .tabs-kpi-list {
+  display: flex;
+  gap: 8px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.tabs-kpi .tabs-kpi-list button {
+  flex: 0 0 max-content;
+  margin: 0;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  padding: 8px 0;
+  background: none;
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--cta-font-size);
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: var(--label-letter-spacing);
+  text-align: left;
+  text-transform: uppercase;
+  white-space: normal;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tabs-kpi .tabs-kpi-list button:hover,
+.tabs-kpi .tabs-kpi-list button:focus-visible {
+  color: var(--callout-blue);
+}
+
+.tabs-kpi .tabs-kpi-list button[aria-selected='true'] {
+  border-color: var(--callout-blue);
+  color: var(--callout-blue);
+  cursor: default;
+}
+
+.tabs-kpi .tabs-kpi-panels {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.tabs-kpi .tabs-kpi-panel {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.tabs-kpi .tabs-kpi-panel[aria-hidden='true'] {
+  display: none;
+}
+
+.tabs-kpi .tabs-kpi-panel-title {
+  margin: 0;
+  color: var(--callout-blue);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+.tabs-kpi .tabs-kpi-subtitle {
+  margin: 0 0 24px;
+  color: var(--text-strong-color);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.tabs-kpi .tabs-kpi-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.tabs-kpi .tabs-kpi-item .tabs-kpi-value {
+  margin: 0 0 8px;
+  color: var(--callout-blue);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xl);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: var(--heading-letter-spacing);
+  text-transform: uppercase;
+}
+
+.tabs-kpi .tabs-kpi-item p {
+  margin: 0 0 16px;
+  color: var(--text-strong-color);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.tabs-kpi .tabs-kpi-label {
+  display: block;
+}
+
+.tabs-kpi .tabs-kpi-item small {
+  display: block;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.tabs-kpi .tabs-kpi-cta {
+  margin: 21px 0 24px;
+  text-align: right;
+}
+
+.tabs-kpi .tabs-kpi-cta a:any-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--link-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.tabs-kpi .tabs-kpi-cta a:any-link::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid currentcolor;
+  border-right: 2px solid currentcolor;
+  transform: rotate(45deg);
+}
+
+@media (width >= 900px) {
+  .tabs-kpi {
+    padding: 40px 60px 16px;
+  }
+
+  .tabs-kpi .tabs-kpi-box {
+    flex-direction: row;
+    gap: 48px;
+    min-height: 328px;
+    padding: 32px 40px;
+  }
+
+  .tabs-kpi .tabs-kpi-list {
+    flex: 0 0 180px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tabs-kpi .tabs-kpi-list button {
+    border-bottom: 0;
+    border-left: 3px solid transparent;
+    padding: 8px 0 8px 12px;
+  }
+
+  .tabs-kpi .tabs-kpi-subtitle {
+    margin-bottom: 24px;
+  }
+
+  .tabs-kpi .tabs-kpi-items {
+    display: flex;
+    gap: 24px;
+  }
+
+  .tabs-kpi .tabs-kpi-item {
+    flex: 1 1 0;
+  }
+}

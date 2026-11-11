@@ -1,0 +1,10 @@
+{
+  "type": "da",
+  "sites": {
+    "eds-ema": {
+      "previewOrg": "mountcrow",
+      "previewSite": "eds-ema",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

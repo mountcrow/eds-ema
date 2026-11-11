@@ -1,0 +1,40 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-07-29T11:49:58.857Z",
+  "sourceContext": {
+    "originUrl": "https://www.terna.it/en",
+    "originPage": "Terna corporate homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + paragraph + CTA per slide",
+    "buttonCount": 1,
+    "imageCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "full-height rotating hero banners",
+      "homepage slider intros",
+      "image-backed slide decks"
+    ],
+    "notSuitableFor": [
+      "small text-only rotators",
+      "single static banners"
+    ]
+  },
+  "usage": {
+    "pagesUsing": [
+      "/en"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-29T11:49:58.857Z"
+  }
+}
